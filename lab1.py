@@ -16,5 +16,8 @@ url = input ("Give url:\t")
 
 if not url.startswith('https://'):
     url = 'https://' + url
-
 print(url)
+with requests.get(url) as response:
+    print(response.text)
+
+
