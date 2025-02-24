@@ -22,3 +22,5 @@ with requests.get(url) as response:
     #   print(f"{key}, []:{response.headers[key]}")
     print(f"Server: {response.headers.get('Server')}")
 
+    print(f"Has cookies: {'Set-Cookie' in response.headers}")
+
