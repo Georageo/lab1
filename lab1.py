@@ -10,6 +10,11 @@ def more(text):
             if reply == 'n':
                 break
 
+
+
+url = input ("Give url:\t")
+print(url)
+
 url = 'http://python.org/'  # προσδιορισμός του url
 
 with requests.get(url) as response:  # το αντικείμενο response
