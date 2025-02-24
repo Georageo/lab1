@@ -13,10 +13,8 @@ def more(text):
 
 
 url = input ("Give url:\t")
+
+if not url.startswitch('https://'):
+    url = 'https://' + url
+
 print(url)
-
-url = 'http://python.org/'  # προσδιορισμός του url
-
-with requests.get(url) as response:  # το αντικείμενο response
-    html = response.text
-    more(html)
