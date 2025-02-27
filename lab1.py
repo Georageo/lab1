@@ -23,4 +23,8 @@ with requests.get(url) as response:
     print(f"Server: {response.headers.get('Server')}")
 
     print(f"Has cookies: {'Set-Cookie' in response.headers}")
-
+    for cookie in response.cookies:
+        if cookie.expires:
+            expires = cookie.expires 
+        else: print(f"Δεν υπάρχει ημερομηνία λήξης")
+        print(f"Όνομα cookie: {cookie.name}, Έγκυρο μέχρι: {expires}")
